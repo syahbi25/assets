@@ -1,0 +1,128 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7);
+	background-size: 400% 400%; /* Ukuran latar belakang */
+	animation: rainbow 15s ease infinite; /* Animasi pelangi */
+	position: relative;
+}
+
+@keyframes rainbow {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+.login-container {
+	text-align: center;
+}
+
+h2 {
+	margin-bottom: 20px;
+	color: #333;
+	font-size: 24px;
+}
+
+.logo {
+	width: 100px; /* Atur lebar logo */
+	margin-bottom: 20px; /* Jarak antara logo dan input */
+}
+
+form {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 350px;
+    transition: box-shadow 0.3s ease;
+    margin: 20px auto; /* Center the table */	
+}
+
+form:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.login-button {
+	background: #8bc34a; /* Hijau muda */
+	color: white;
+	border: none;
+	padding: 12px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background 0.3s;
+	width: 100%;
+}
+
+.login-button:hover {
+	background: #6fbf4a; /* Hijau tua saat hover */
+}
+
+.forgot-password {
+	margin-top: 15px;
+	font-size: 14px;
+	color: #555;
+}
+
+.forgot-password a {
+	text-decoration: none;
+	color: #007bff; /* Warna link */
+}
+
+.forgot-password a:hover {
+	text-decoration: underline;
+}
+
+.smiley {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	font-size: 50px;
+	animation: roll 10s infinite ease-in-out;
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-50px);
+	}
+}
+
+@keyframes roll {
+	0% {
+		transform: translateX(0) rotate(0deg);
+		right: 20px;
+	}
+	50% {
+		transform: translateX(-100vw) rotate(-360deg);
+		right: initial;
+		left: 20px;
+	}
+	100% {
+		transform: translateX(0) rotate(-720deg);
+		right: 20px;
+		left: initial;
+	}
+}
